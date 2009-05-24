@@ -26,7 +26,7 @@ module Net  #:nodoc: all
   end
 
   class HTTP
-    self << class
+    class << self
       remove_method :socket_type
     end
     def self.socket_type
