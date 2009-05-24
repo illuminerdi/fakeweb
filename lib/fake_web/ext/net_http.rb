@@ -27,7 +27,7 @@ module Net  #:nodoc: all
 
   class HTTP
     class << self
-      remove_method :socket_type
+      alias :old_socket_type :socket_type
     end
     def self.socket_type
       FakeWeb::StubSocket
